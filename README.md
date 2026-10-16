@@ -54,7 +54,7 @@ public/                 # images et ressources statiques
 
 ## Formulaire de contact
 
-Le formulaire valide les champs et l’adresse e-mail, mais l’envoi d’e-mail n’est pas encore connecté à un fournisseur. L’action serveur affiche actuellement les messages dans les journaux du serveur. Configurez un service d’e-mail avant de l’utiliser en production.
+Le formulaire envoie les messages via [Resend](https://resend.com/). Pour l’activer, copiez `.env.example` en `.env.local`, renseignez votre clé API Resend ainsi qu’une adresse d’expédition vérifiée dans Resend, puis configurez l’adresse de réception. La clé API reste côté serveur et ne doit jamais être préfixée par `NEXT_PUBLIC_`.
 
 ## Déploiement
 

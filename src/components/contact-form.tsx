@@ -17,10 +17,10 @@ export function ContactForm() {
   return (
     <form action={action} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
-        <input name="name" required placeholder={t('name')} className={inputCls} />
-        <input name="email" type="email" required placeholder={t('email')} className={inputCls} />
+        <input name="name" required maxLength={120} autoComplete="name" placeholder={t('name')} className={inputCls} />
+        <input name="email" type="email" required maxLength={254} autoComplete="email" placeholder={t('email')} className={inputCls} />
       </div>
-      <textarea name="message" required rows={6} placeholder={t('message')} className={inputCls} />
+      <textarea name="message" required maxLength={5000} rows={6} placeholder={t('message')} className={inputCls} />
 
       <button
         type="submit"

@@ -19,18 +19,18 @@ export default async function ContactPage({params}: {params: Promise<{locale: st
 
         <ul className="mt-10 space-y-3 text-sm">
           <li>
-            <a href="mailto:hello@alexmartin.dev" className="inline-flex items-center gap-3 hover:text-accent">
-              <Mail className="h-4 w-4" /> hello@alexmartin.dev
+            <a href="mailto:nchetkourafiatou@gmail.com" className="inline-flex items-center gap-3 hover:text-accent">
+              <Mail className="h-4 w-4" /> nchetkourafiatou@gmail.com
             </a>
           </li>
           <li>
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 hover:text-accent">
-              <BsGithub className="h-4 w-4" /> github.com/alex
+            <a href="https://github.com/Rafiatou-Nchetkou" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 hover:text-accent">
+              <BsGithub className="h-4 w-4" /> github.com/Rafiatou-Nchetkou
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 hover:text-accent">
-              <FiLinkedin className="h-4 w-4" /> linkedin.com/in/alex
+            <a href="https://www.linkedin.com/in/rafiatou-nchetkou" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 hover:text-accent">
+              <FiLinkedin className="h-4 w-4" /> linkedin.com/in/rafiatou-nchetkou
             </a>
           </li>
         </ul>
