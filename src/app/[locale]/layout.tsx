@@ -33,7 +33,7 @@ export async function generateMetadata({
   return {
     title: {default: t('title'), template: `%s — Alex Martin`},
     description: t('description'),
-    metadataBase: new URL('https://alexmartin.dev'),
+    metadataBase: new URL('https://rafiatou-nchetkou-portfolio.vercel.app'),
     openGraph: {title: t('title'), description: t('description'), type: 'website'}
   };
 }
