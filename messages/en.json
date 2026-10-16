@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "title": "Rafiatou Nchetkou — Fullstack web developer",
+    "description": "Web developer focused on React, Next.js and TypeScript. Based in Cameroon, available for freelance and full-time roles."
+  },
+  "Nav": {"home": "Home", "projects": "Projects", "about": "About", "contact": "Contact"},
+  "Hero": {
+    "badge": "Available for work",
+    "titleBefore": "I turn ideas into ",
+    "titleAccent": "web applications",
+    "titleAfter": " that are clear and fast.",
+    "subtitle": "Web developer focused on React, Next.js and TypeScript. From UX to API integration, I ship modern, accessible and tested interfaces.",
+    "ctaPrimary": "See my work",
+    "ctaSecondary": "Get in touch",
+    "stat1": "3+ years experience",
+    "stat2": "8+ projects shipped",
+    "stat3": "Cameroon"
+  },
+  "Services": {
+    "title": "What I do",
+    "subtitle": "From prototype to production.",
+    "items": [
+      {"title": "Modern web interfaces", "description": "React, Next.js, TypeScript, Tailwind. Reusable, responsive, accessible components."},
+      {"title": "REST API integration", "description": "Consuming documented APIs (Swagger), state management, async calls, caching and sync."},
+      {"title": "UX/UI & design systems", "description": "Figma mockups, consistent design systems, continuous UX improvements."}
+    ]
+  },
+  "Featured": {"title": "Selected work", "subtitle": "A glimpse of what I build.", "seeAll": "All projects"},
+  "Projects": {"title": "Projects", "intro": "Case studies: context, technical decisions, outcomes."},
+  "CTA": {"title": "A project, a role, an idea?", "subtitle": "Reply within 24h.", "button": "Let's talk"},
+  "About": {
+    "title": "About",
+    "intro": "Web developer based in Cameroon, focused on frontend with React, Next.js and TypeScript.",
+    "body1": "Passionate about new technologies and the web, I specialised in building modern applications. I love designing clear interfaces, understanding user needs and shipping useful, tested, scalable products.",
+    "body2": "Across my experiences, I've worked on payment platforms, job boards, digital libraries and internal tools. I've touched UX/UI, documented REST API integration, state management and front-to-back data sync.",
+    "body3": "My goal: grow into a fullstack role, then into project management, while staying deeply technical.",
+    "skillsTitle": "Skills",
+    "softTitle": "Soft skills",
+    "languesTitle": "Languages",
+    "parcoursTitle": "Background",
+    "formationTitle": "Education",
+    "skills": {"frontend": "Frontend", "backend": "Backend (basics)", "tools": "Tools"},
+    "soft": ["Autonomy", "Adaptability", "Teamwork", "Communication"],
+    "langues": ["French — fluent", "English — professional"],
+    "formation": [
+      {"title": "Professional qualification diploma", "place": "Digital school, Yaoundé", "period": "2022 – 2023"},
+      {"title": "Bachelor's degree", "place": "University, Yaoundé 1", "period": "2021 – 2022"},
+      {"title": "High school diploma", "place": "Bilingual high school, Kribi", "period": "2018 – 2019"}
+    ],
+    "coursesTitle": "Additional courses",
+    "courses": ["Complete React, Next.js & TypeScript Projects — Udemy (2025)"]
+  },
+  "Contact": {
+    "title": "Contact",
+    "intro": "Easiest: email or LinkedIn.",
+    "name": "Name", "email": "Email", "message": "Message", "send": "Send",
+    "success": "Message sent. I'll get back to you soon.",
+    "error": "Something went wrong. Try again or email me.",
+    "locationLabel": "Location",
+    "phoneLabel": "Phone"
+  }
+}

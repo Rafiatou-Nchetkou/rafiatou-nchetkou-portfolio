@@ -1,0 +1,94 @@
+{
+  "Metadata": {
+    "title": "Rafiatou Nchetkou — Développeuse web fullstack",
+    "description": "Développeuse web spécialisée en React, Next.js et TypeScript. Basée au Cameroun, disponible pour missions freelance et CDI."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Disponible pour missions",
+    "titleBefore": "Je transforme des idées en ",
+    "titleAccent": "applications web",
+    "titleAfter": " claires et rapides.",
+    "subtitle": "Développeuse web spécialisée en React, Next.js et TypeScript. De l'UX à l'intégration d'API, je livre des interfaces modernes, accessibles et testées.",
+    "ctaPrimary": "Voir mes projets",
+    "ctaSecondary": "Me contacter",
+    "stat1": "3+ ans d'expérience",
+    "stat2": "8+ projets livrés",
+    "stat3": "Cameroun"
+  },
+  "Services": {
+    "title": "Ce que je fais",
+    "subtitle": "Du prototype au produit en production.",
+    "items": [
+      {
+        "title": "Interfaces web modernes",
+        "description": "React, Next.js, TypeScript, Tailwind. Composants réutilisables, responsive, accessibles."
+      },
+      {
+        "title": "Intégration d'API REST",
+        "description": "Consommation d'API documentées (Swagger), gestion d'états, appels asynchrones, cache et synchronisation."
+      },
+      {
+        "title": "UX/UI & design system",
+        "description": "Maquettes Figma, design systems cohérents, amélioration continue de l'expérience utilisateur."
+      }
+    ]
+  },
+  "Featured": {
+    "title": "Projets sélectionnés",
+    "subtitle": "Un aperçu de ce que je construis.",
+    "seeAll": "Tous les projets"
+  },
+  "Projects": {
+    "title": "Projets",
+    "intro": "Études de cas : contexte, décisions techniques, résultats."
+  },
+  "CTA": {
+    "title": "Un projet, un poste, une idée ?",
+    "subtitle": "Réponse sous 24h.",
+    "button": "Discutons"
+  },
+  "About": {
+    "title": "À propos",
+    "intro": "Développeuse web basée au Cameroun, spécialisée en frontend avec React, Next.js et TypeScript.",
+    "body1": "Passionnée par les nouvelles technologies et l'univers du web, je me suis spécialisée dans le développement d'applications modernes. J'aime concevoir des interfaces claires, comprendre les besoins des utilisateurs et livrer des produits utiles, testés et évolutifs.",
+    "body2": "Au fil de mes expériences, j'ai travaillé sur des plateformes de paiement, des sites d'emploi, des bibliothèques numériques et des outils internes. J'ai touché à l'UX/UI, à l'intégration d'API REST documentées, à la gestion d'états et à la synchronisation de données entre front et back.",
+    "body3": "Mon objectif : évoluer vers un rôle fullstack, puis vers la gestion de projet, en gardant une forte culture technique.",
+    "skillsTitle": "Compétences",
+    "softTitle": "Savoir-être",
+    "languesTitle": "Langues",
+    "parcoursTitle": "Parcours",
+    "formationTitle": "Formation",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend (notions)",
+      "tools": "Outils"
+    },
+    "soft": ["Autonomie", "Adaptabilité", "Esprit d'équipe", "Communication"],
+    "langues": ["Français — courant", "Anglais — professionnel"],
+    "formation": [
+      {"title": "Diplôme de qualification professionnelle", "place": "École numérique, Yaoundé", "period": "2022 – 2023"},
+      {"title": "Licence", "place": "Université, Yaoundé 1", "period": "2021 – 2022"},
+      {"title": "Baccalauréat", "place": "Lycée bilingue, Kribi", "period": "2018 – 2019"}
+    ],
+    "coursesTitle": "Formations complémentaires",
+    "courses": ["Complete React, Next.js & TypeScript Projects — Udemy (2025)"]
+  },
+  "Contact": {
+    "title": "Contact",
+    "intro": "Le plus simple : email ou LinkedIn.",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer",
+    "success": "Message envoyé. Je reviens vers toi vite.",
+    "error": "Une erreur est survenue. Réessaie ou écris-moi par email.",
+    "locationLabel": "Localisation",
+    "phoneLabel": "Téléphone"
+  }
+}

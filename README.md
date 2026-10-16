@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Rafiatou Nchetkou
 
-## Getting Started
+Portfolio personnel de Rafiatou Nchetkou, développeuse web spécialisée en React, Next.js et TypeScript. Le site présente son parcours, ses compétences et ses projets, avec une interface disponible en français et en anglais.
 
-First, run the development server:
+## Fonctionnalités
+
+- Pages d’accueil, À propos, projets et contact
+- Études de cas pour les projets
+- Interface française par défaut et version anglaise accessible sous `/en`
+- Thème clair/sombre et mise en page responsive
+- Animations et transitions
+- Métadonnées Open Graph et icônes du site
+
+## Technologies
+
+- Next.js 16 avec App Router
+- React 19 et TypeScript
+- Tailwind CSS 4
+- next-intl pour les traductions
+- Motion pour les animations
+
+## Démarrer en local
+
+Prérequis : Node.js et npm.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Commandes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev    # serveur de développement
+npm run lint   # vérification ESLint
+npm run build  # compilation de production
+npm run start  # serveur de production après compilation
+```
 
-## Learn More
+## Organisation
 
-To learn more about Next.js, take a look at the following resources:
+```text
+src/
+├── app/[locale]/       # pages localisées
+├── components/         # composants et sections du site
+├── data/projects.ts    # contenu des projets
+├── i18n/               # configuration du routage et des traductions
+└── proxy.ts            # routage des locales
+messages/               # traductions française et anglaise
+public/                 # images et ressources statiques
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Formulaire de contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le formulaire valide les champs et l’adresse e-mail, mais l’envoi d’e-mail n’est pas encore connecté à un fournisseur. L’action serveur affiche actuellement les messages dans les journaux du serveur. Configurez un service d’e-mail avant de l’utiliser en production.
 
-## Deploy on Vercel
+## Déploiement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le projet peut être déployé sur une plateforme compatible avec Next.js, comme [Vercel](https://vercel.com/). Vérifiez la configuration du formulaire de contact avant la mise en production.
