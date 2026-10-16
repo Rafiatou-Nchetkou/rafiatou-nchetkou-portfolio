@@ -1,66 +1,53 @@
 'use server';
 
+import {Resend} from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 export type ContactState = {status: 'idle' | 'success' | 'error'};
 
-export async function sendMessage(_prev: ContactState, formData: FormData): Promise<ContactState> {
-  const rawName = formData.get('name');
-  const rawEmail = formData.get('email');
-  const rawMessage = formData.get('message');
+export async function sendMessage(
+  _prev: ContactState,
+  formData: FormData
+): Promise<ContactState> {
+  const name = String(formData.get('name') ?? '').trim();
+  const email = String(formData.get('email') ?? '').trim();
+  const message = String(formData.get('message') ?? '').trim();
 
-  if (typeof rawName !== 'string' || typeof rawEmail !== 'string' || typeof rawMessage !== 'string') {
-    return {status: 'error'};
-  }
-
-  const name = rawName.trim().replace(/[\r\n\t]+/g, ' ').slice(0, 120);
-  const email = rawEmail.trim();
-  const message = rawMessage.trim();
-
-  if (
-    !name ||
-    !email ||
-    !message ||
-    email.length > 254 ||
-    message.length > 5000 ||
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-  ) {
-    return {status: 'error'};
-  }
-
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.CONTACT_FROM_EMAIL;
-  const to = process.env.CONTACT_TO_EMAIL;
-
-  if (!apiKey || !from || !to) {
-    console.error('Contact form is missing Resend environment variables.');
+  if (!name || !email || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return {status: 'error'};
   }
 
   try {
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        reply_to: email,
-        subject: `Message du portfolio — ${name}`,
-        text: `Nom : ${name}\nE-mail : ${email}\n\n${message}`
-      }),
-      cache: 'no-store',
-      signal: AbortSignal.timeout(10_000)
+    await resend.emails.send({
+      from: 'Portfolio <onboarding@resend.dev>',
+      to: 'nchetkourafiatou@gmail.com',
+      replyTo: email,
+      subject: `Contact portfolio — ${name}`,
+      text: `De : ${name} <${email}>\n\n${message}`,
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px;">
+          <h2 style="color: #7c3aed;">Nouveau message du portfolio</h2>
+          <p><strong>Nom :</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email :</strong> ${escapeHtml(email)}</p>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+          <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
+        </div>
+      `
     });
 
-    if (!response.ok) {
-      console.error(`Resend rejected the contact message (HTTP ${response.status}).`);
-      return {status: 'error'};
-    }
+    return {status: 'success'};
   } catch (error) {
-    console.error('Resend could not send the contact message.', error);
+    console.error('Resend error:', error);
     return {status: 'error'};
   }
+}
 
-  return {status: 'success'};
+function escapeHtml(str: string) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
