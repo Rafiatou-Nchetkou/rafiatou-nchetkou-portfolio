@@ -20,6 +20,9 @@ export function Hero() {
           transition={{duration: 0.8, delay: 0.12, ease: [0.22, 1, 0.36, 1]}}
           className="relative order-1 mx-auto w-full max-w-[350px] lg:order-2 lg:max-w-[410px]"
         >
+          <div aria-hidden className="pointer-events-none absolute -right-14 top-1/2 hidden aspect-video w-[440px] -translate-y-1/2 overflow-hidden rounded-3xl opacity-25 blur-sm lg:block">
+            <Image src="/projects/bankflow-dashboard.svg" alt="" fill sizes="440px" className="object-cover" />
+          </div>
           <div aria-hidden className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-accent/40 via-accent-2/30 to-accent-3/40 blur-2xl" />
           <div className="absolute -inset-[2px] rounded-[2rem] bg-gradient-to-br from-accent via-accent-2 to-accent-3" />
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-muted ring-1 ring-background/60">
